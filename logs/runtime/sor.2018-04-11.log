@@ -1,0 +1,415 @@
+2018-04-11 18:12:58.202 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - Starting SorApplication on CNybzhou.local with PID 62610 (/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes started by ybzhou in /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka)
+2018-04-11 18:12:58.207 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - The following profiles are active: dev
+2018-04-11 18:12:58.284 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@544fa968: startup date [Wed Apr 11 18:12:58 CST 2018]; root of context hierarchy
+2018-04-11 18:12:59.203 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2f5bd50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-11 18:12:59.473 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2018-04-11 18:12:59.488 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2018-04-11 18:12:59.496 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-11 18:12:59.496 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-11 18:12:59.500 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/ybzhou/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-04-11 18:12:59.578 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-11 18:12:59.579 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1295 ms
+2018-04-11 18:12:59.676 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-04-11 18:12:59.681 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-11 18:12:59.681 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-11 18:12:59.681 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-11 18:12:59.681 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-11 18:12:59.807 [main] INFO  org.flywaydb.core.internal.util.VersionPrinter - Flyway Community Edition 5.0.3 by Boxfuse
+2018-04-11 18:13:03.882 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3307/sor?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+2018-04-11 18:13:03.884 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2018-04-11 18:13:03.895 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-11 18:13:03.904 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3307/sor?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.thouthworks.felix.services.eureka.sor.SorApplication.main(SorApplication.java:10)
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3307/sor?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:431)
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnection(DriverDataSource.java:380)
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:51)
+	at org.flywaydb.core.internal.database.DatabaseFactory.createDatabase(DatabaseFactory.java:67)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1629)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1168)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	... 18 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2096)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2021)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:417)
+	... 26 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2037)
+	... 37 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 39 common frames omitted
+2018-04-11 18:13:54.866 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - Starting SorApplication on CNybzhou.local with PID 62681 (/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes started by ybzhou in /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka)
+2018-04-11 18:13:54.870 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - The following profiles are active: dev
+2018-04-11 18:13:54.974 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e6f74c: startup date [Wed Apr 11 18:13:54 CST 2018]; root of context hierarchy
+2018-04-11 18:13:56.210 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e6d1fd7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-11 18:13:56.700 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2018-04-11 18:13:56.719 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2018-04-11 18:13:56.731 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-11 18:13:56.731 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-11 18:13:56.737 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/ybzhou/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-04-11 18:13:56.818 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-11 18:13:56.819 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1845 ms
+2018-04-11 18:13:56.935 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-04-11 18:13:56.939 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-11 18:13:56.939 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-11 18:13:56.939 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-11 18:13:56.940 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-11 18:13:57.078 [main] INFO  org.flywaydb.core.internal.util.VersionPrinter - Flyway Community Edition 5.0.3 by Boxfuse
+2018-04-11 18:13:59.296 [main] INFO  o.flywaydb.core.internal.database.DatabaseFactory - Database: jdbc:mysql://localhost:3307/sor (MySQL 5.7)
+2018-04-11 18:13:59.299 [main] DEBUG org.flywaydb.core.Flyway - DDL Transactions Supported: false
+2018-04-11 18:13:59.299 [main] DEBUG org.flywaydb.core.Flyway - Schema: sor
+2018-04-11 18:13:59.304 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - Spring Jdbc available: true
+2018-04-11 18:13:59.305 [main] DEBUG o.f.core.internal.callback.SqlScriptFlywayCallback - Scanning for SQL callbacks ...
+2018-04-11 18:13:59.305 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: '', Suffixes: '.sql')
+2018-04-11 18:13:59.305 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Determining location urls for classpath:db/migration using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2 ...
+2018-04-11 18:13:59.305 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 18:13:59.306 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 18:13:59.307 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/
+2018-04-11 18:13:59.307 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration (db/migration)
+2018-04-11 18:13:59.312 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_images_table.sql
+2018-04-11 18:13:59.334 [main] DEBUG org.flywaydb.core.internal.command.DbValidate - Validating migrations ...
+2018-04-11 18:13:59.337 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'V', Suffixes: '.sql')
+2018-04-11 18:13:59.338 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 18:13:59.338 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 18:13:59.342 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_images_table.sql
+2018-04-11 18:13:59.345 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'R', Suffixes: '.sql')
+2018-04-11 18:13:59.345 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 18:13:59.346 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 18:13:59.354 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_images_table.sql (filename: V1__create_images_table.sql)
+2018-04-11 18:13:59.355 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.jdbc.JdbcMigration')
+2018-04-11 18:13:59.355 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 18:13:59.355 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 18:13:59.358 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_images_table.sql (filename: V1__create_images_table.sql)
+2018-04-11 18:13:59.359 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.spring.SpringJdbcMigration')
+2018-04-11 18:13:59.359 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 18:13:59.359 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 18:13:59.362 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_images_table.sql (filename: V1__create_images_table.sql)
+2018-04-11 18:13:59.373 [main] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.038s)
+2018-04-11 18:13:59.380 [main] DEBUG org.flywaydb.core.internal.command.DbSchemas - Schema `sor` already exists. Skipping schema creation.
+2018-04-11 18:13:59.426 [main] INFO  o.f.c.i.schemahistory.JdbcTableSchemaHistory - Creating Schema History table: `sor`.`flyway_schema_history`
+2018-04-11 18:13:59.433 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Found statement at line 17: CREATE TABLE `sor`.`flyway_schema_history` (
+    `installed_rank` INT NOT NULL,
+    `version` VARCHAR(50),
+    `description` VARCHAR(200) NOT NULL,
+    `type` VARCHAR(20) NOT NULL,
+    `script` VARCHAR(1000) NOT NULL,
+    `checksum` INT,
+    `installed_by` VARCHAR(100) NOT NULL,
+    `installed_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `execution_time` INT NOT NULL,
+    `success` BOOL NOT NULL,
+    -- Add the primary key as part of the CREATE TABLE statement in case `innodb_force_primary_key` is enabled
+    CONSTRAINT `flyway_schema_history_pk`PRIMARY KEY (`installed_rank`)
+) ENGINE=InnoDB
+2018-04-11 18:13:59.433 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Found statement at line 32: CREATE INDEX `flyway_schema_history_s_idx` ON `sor`.`flyway_schema_history` (`success`)
+2018-04-11 18:13:59.434 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Executing SQL: CREATE TABLE `sor`.`flyway_schema_history` (
+    `installed_rank` INT NOT NULL,
+    `version` VARCHAR(50),
+    `description` VARCHAR(200) NOT NULL,
+    `type` VARCHAR(20) NOT NULL,
+    `script` VARCHAR(1000) NOT NULL,
+    `checksum` INT,
+    `installed_by` VARCHAR(100) NOT NULL,
+    `installed_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `execution_time` INT NOT NULL,
+    `success` BOOL NOT NULL,
+    -- Add the primary key as part of the CREATE TABLE statement in case `innodb_force_primary_key` is enabled
+    CONSTRAINT `flyway_schema_history_pk`PRIMARY KEY (`installed_rank`)
+) ENGINE=InnoDB
+2018-04-11 18:13:59.457 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Update Count: 0
+2018-04-11 18:13:59.458 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Executing SQL: CREATE INDEX `flyway_schema_history_s_idx` ON `sor`.`flyway_schema_history` (`success`)
+2018-04-11 18:13:59.486 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Update Count: 0
+2018-04-11 18:13:59.487 [main] DEBUG o.f.c.i.schemahistory.JdbcTableSchemaHistory - Schema History table `sor`.`flyway_schema_history` created.
+2018-04-11 18:13:59.500 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `sor`: << Empty Schema >>
+2018-04-11 18:13:59.501 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Parsing V1__create_images_table.sql ...
+2018-04-11 18:13:59.502 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Found statement at line 1: DROP TABLE IF EXISTS IMAGES
+2018-04-11 18:13:59.502 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Found statement at line 2: CREATE TABLE `images` (
+  `id`         BIGINT(20)   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `content`    VARCHAR(500) NOT NULL,
+  `created_at` TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+2018-04-11 18:13:59.504 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Migrating schema `sor` to version 1 - create images table
+2018-04-11 18:13:59.506 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Executing SQL: DROP TABLE IF EXISTS IMAGES
+2018-04-11 18:13:59.511 [main] WARN  org.flywaydb.core.internal.sqlscript.SqlScript - DB: Unknown table 'sor.images' (SQL State: 42S02 - Error Code: 1051)
+2018-04-11 18:13:59.511 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Update Count: 0
+2018-04-11 18:13:59.520 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Executing SQL: CREATE TABLE `images` (
+  `id`         BIGINT(20)   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `content`    VARCHAR(500) NOT NULL,
+  `created_at` TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+2018-04-11 18:13:59.553 [main] DEBUG org.flywaydb.core.internal.sqlscript.SqlScript - Update Count: 0
+2018-04-11 18:13:59.554 [main] DEBUG org.flywaydb.core.internal.command.DbMigrate - Successfully completed migration of schema `sor` to version 1 - create images table
+2018-04-11 18:13:59.560 [main] DEBUG org.flywaydb.core.internal.database.Table - Locking table `sor`.`flyway_schema_history`...
+2018-04-11 18:13:59.562 [main] DEBUG org.flywaydb.core.internal.database.Table - Lock acquired for table `sor`.`flyway_schema_history`
+2018-04-11 18:13:59.564 [main] DEBUG o.f.c.i.schemahistory.JdbcTableSchemaHistory - Schema history table `sor`.`flyway_schema_history` successfully updated to reflect changes
+2018-04-11 18:13:59.577 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Successfully applied 1 migration to schema `sor` (execution time 00:00.154s)
+2018-04-11 18:13:59.690 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-11 18:13:59.713 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-11 18:13:59.846 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-11 18:13:59.859 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-11 18:13:59.916 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-11 18:13:59.917 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-11 18:13:59.950 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-11 18:14:00.042 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-04-11 18:14:00.221 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-11 18:14:00.285 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-11 18:14:00.516 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e6f74c: startup date [Wed Apr 11 18:13:54 CST 2018]; root of context hierarchy
+2018-04-11 18:14:00.567 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-11 18:14:00.568 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-11 18:14:00.591 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-11 18:14:00.592 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-11 18:14:00.879 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-11 18:14:00.880 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-11 18:14:00.887 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-11 18:14:00.897 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2018-04-11 18:14:00.921 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-11 18:14:00.933 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2018-04-11 18:14:00.938 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - Started SorApplication in 6.922 seconds (JVM running for 7.548)
+2018-04-11 23:12:35.516 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m3s395ms).
+2018-04-11 23:16:58.055 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s535ms).
+2018-04-11 23:21:20.799 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s735ms).
+2018-04-11 23:25:43.519 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s710ms).
+2018-04-11 23:29:36.102 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s583ms).
+2018-04-11 23:34:00.347 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m54s243ms).
+2018-04-11 23:38:22.780 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s424ms).
+2018-04-11 23:42:43.726 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m50s933ms).
+2018-04-11 23:47:06.168 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m52s437ms).
+2018-04-11 23:50:03.101 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m56s934ms).
+2018-04-11 23:59:48.561 [Thread-17] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e6f74c: startup date [Wed Apr 11 18:13:54 CST 2018]; root of context hierarchy
+2018-04-11 23:59:48.606 [Thread-17] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-11 23:59:48.609 [Thread-17] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-11 23:59:48.612 [Thread-17] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-11 23:59:48.622 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-11 23:59:48.632 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-11 23:59:53.775 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - Starting SorApplication on CNybzhou.local with PID 70970 (/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes started by ybzhou in /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka)
+2018-04-11 23:59:53.778 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - The following profiles are active: dev
+2018-04-11 23:59:53.829 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7586beff: startup date [Wed Apr 11 23:59:53 CST 2018]; root of context hierarchy
+2018-04-11 23:59:54.837 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8e90b0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-11 23:59:55.069 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2018-04-11 23:59:55.087 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2018-04-11 23:59:55.094 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-04-11 23:59:55.095 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-04-11 23:59:55.098 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/ybzhou/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-04-11 23:59:55.167 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-04-11 23:59:55.168 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1339 ms
+2018-04-11 23:59:55.283 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-04-11 23:59:55.289 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-11 23:59:55.289 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-11 23:59:55.289 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-11 23:59:55.289 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-11 23:59:55.414 [main] INFO  org.flywaydb.core.internal.util.VersionPrinter - Flyway Community Edition 5.0.3 by Boxfuse
+2018-04-11 23:59:55.601 [main] INFO  o.flywaydb.core.internal.database.DatabaseFactory - Database: jdbc:mysql://localhost:3307/sor (MySQL 5.7)
+2018-04-11 23:59:55.603 [main] DEBUG org.flywaydb.core.Flyway - DDL Transactions Supported: false
+2018-04-11 23:59:55.604 [main] DEBUG org.flywaydb.core.Flyway - Schema: sor
+2018-04-11 23:59:55.607 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - Spring Jdbc available: true
+2018-04-11 23:59:55.608 [main] DEBUG o.f.core.internal.callback.SqlScriptFlywayCallback - Scanning for SQL callbacks ...
+2018-04-11 23:59:55.608 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: '', Suffixes: '.sql')
+2018-04-11 23:59:55.608 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Determining location urls for classpath:db/migration using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2 ...
+2018-04-11 23:59:55.609 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 23:59:55.609 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 23:59:55.610 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/
+2018-04-11 23:59:55.610 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration (db/migration)
+2018-04-11 23:59:55.615 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_images_table.sql
+2018-04-11 23:59:55.633 [main] DEBUG org.flywaydb.core.internal.command.DbValidate - Validating migrations ...
+2018-04-11 23:59:55.636 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'V', Suffixes: '.sql')
+2018-04-11 23:59:55.637 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 23:59:55.637 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 23:59:55.641 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_images_table.sql
+2018-04-11 23:59:55.644 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'R', Suffixes: '.sql')
+2018-04-11 23:59:55.644 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 23:59:55.644 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 23:59:55.647 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_images_table.sql (filename: V1__create_images_table.sql)
+2018-04-11 23:59:55.648 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.jdbc.JdbcMigration')
+2018-04-11 23:59:55.648 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 23:59:55.649 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 23:59:55.652 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_images_table.sql (filename: V1__create_images_table.sql)
+2018-04-11 23:59:55.653 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.spring.SpringJdbcMigration')
+2018-04-11 23:59:55.653 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sor/target/classes/db/migration
+2018-04-11 23:59:55.653 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-11 23:59:55.660 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_images_table.sql (filename: V1__create_images_table.sql)
+2018-04-11 23:59:55.686 [main] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.052s)
+2018-04-11 23:59:55.695 [main] DEBUG org.flywaydb.core.internal.command.DbSchemas - Schema `sor` already exists. Skipping schema creation.
+2018-04-11 23:59:55.725 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `sor`: 1
+2018-04-11 23:59:55.726 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `sor` is up to date. No migration necessary.
+2018-04-11 23:59:55.890 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-11 23:59:55.912 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-11 23:59:55.946 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-11 23:59:55.959 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-11 23:59:56.011 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-11 23:59:56.012 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-11 23:59:56.050 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-11 23:59:56.141 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-04-11 23:59:56.402 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.thouthworks.felix.services.eureka.sor.domain.Image (class must be instantiated by Interceptor)
+2018-04-11 23:59:56.515 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-11 23:59:56.783 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-11 23:59:57.014 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7586beff: startup date [Wed Apr 11 23:59:53 CST 2018]; root of context hierarchy
+2018-04-11 23:59:57.075 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/images],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.thouthworks.felix.services.eureka.sor.domain.Image>> com.thouthworks.felix.services.eureka.sor.rest.ImagesApi.listImages()
+2018-04-11 23:59:57.077 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/images/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.thouthworks.felix.services.eureka.sor.domain.Image> com.thouthworks.felix.services.eureka.sor.rest.ImagesApi.showImage(java.lang.Long)
+2018-04-11 23:59:57.077 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/images],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sor.rest.ImagesApi.createImage(java.lang.String)
+2018-04-11 23:59:57.079 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-11 23:59:57.080 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-11 23:59:57.117 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-11 23:59:57.117 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-11 23:59:57.465 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-11 23:59:57.466 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-11 23:59:57.472 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-11 23:59:57.483 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2018-04-11 23:59:57.507 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-04-11 23:59:57.517 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2018-04-11 23:59:57.521 [main] INFO  c.t.felix.services.eureka.sor.SorApplication - Started SorApplication in 4.291 seconds (JVM running for 4.926)
+2018-04-12 00:00:15.559 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-12 00:00:15.560 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-12 00:00:15.584 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-04-12 00:00:36.393 [http-nio-8081-exec-4] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-12 00:00:38.892 [http-nio-8081-exec-5] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.thouthworks.felix.services.eureka.sor.rest.exceptions.NotFoundException: uploading not found] with root cause
+com.thouthworks.felix.services.eureka.sor.rest.exceptions.NotFoundException: uploading not found
+	at com.thouthworks.felix.services.eureka.sor.rest.ImagesApi.lambda$showImage$0(ImagesApi.java:40)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at com.thouthworks.felix.services.eureka.sor.rest.ImagesApi.showImage(ImagesApi.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-04-12 00:01:18.527 [Thread-12] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7586beff: startup date [Wed Apr 11 23:59:53 CST 2018]; root of context hierarchy
+2018-04-12 00:01:18.532 [Thread-12] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-12 00:01:18.533 [Thread-12] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-12 00:01:18.534 [Thread-12] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-12 00:01:18.535 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-12 00:01:18.537 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

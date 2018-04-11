@@ -8,4 +8,8 @@ public abstract class Routes {
     public static URI uploadingUri(Long uploadingId) {
         return URI.create("/uploadings/" + uploadingId);
     }
+
+    public static URI approvalUri(Long uploadingId) {
+        return URI.create("/uploadings/" + uploadingId + "/approval");
+    }
 }

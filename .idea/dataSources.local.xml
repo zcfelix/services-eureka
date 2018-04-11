@@ -11,5 +11,15 @@
       <user-name>user</user-name>
       <introspection-schemas>*:sod</introspection-schemas>
     </data-source>
+    <data-source name="sor@localhost" uuid="f8d8fbcc-d04a-4326-ab1a-6c941f143620">
+      <database-info product="$DB_PASSWORD$" version="5.7.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>user</user-name>
+      <introspection-schemas>*:sor</introspection-schemas>
+    </data-source>
   </component>
 </project>
