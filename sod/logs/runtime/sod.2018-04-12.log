@@ -1,0 +1,382 @@
+2018-04-12 00:31:47.501 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - Starting SodApplicationTests on CNybzhou.local with PID 72266 (started by ybzhou in /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod)
+2018-04-12 00:31:47.502 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - The following profiles are active: dev
+2018-04-12 00:31:47.866 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6d1310f6: startup date [Thu Apr 12 00:31:47 CST 2018]; root of context hierarchy
+2018-04-12 00:31:49.056 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6883f267] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-12 00:31:49.291 [main] INFO  org.flywaydb.core.internal.util.VersionPrinter - Flyway Community Edition 5.0.3 by Boxfuse
+2018-04-12 00:31:53.509 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3308/sod?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+2018-04-12 00:31:53.521 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-12 00:31:53.526 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3308/sod?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3308/sod?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:431)
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnection(DriverDataSource.java:380)
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:51)
+	at org.flywaydb.core.internal.database.DatabaseFactory.createDatabase(DatabaseFactory.java:67)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1629)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1168)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	... 44 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2096)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2021)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:417)
+	... 52 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2037)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:400)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:243)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:225)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:402)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 65 common frames omitted
+2018-04-12 00:31:53.529 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5a2d131d] to prepare test instance [com.thouthworks.felix.services.eureka.sod.SodApplicationTests@704067c6]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3308/sod?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 27 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database (jdbc:mysql://localhost:3308/sod?autoReconnect=true&useSSL=false) for user 'user': Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:431)
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnection(DriverDataSource.java:380)
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:51)
+	at org.flywaydb.core.internal.database.DatabaseFactory.createDatabase(DatabaseFactory.java:67)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1629)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1168)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	... 44 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2096)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2021)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.flywaydb.core.internal.util.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:417)
+	... 52 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2037)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:400)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:243)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:225)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:402)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 65 common frames omitted
+2018-04-12 00:33:11.335 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - Starting SodApplicationTests on CNybzhou.local with PID 72517 (started by ybzhou in /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod)
+2018-04-12 00:33:11.336 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - The following profiles are active: dev
+2018-04-12 00:33:11.635 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3aaf4f07: startup date [Thu Apr 12 00:33:11 CST 2018]; root of context hierarchy
+2018-04-12 00:33:12.811 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ee9211d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-12 00:33:13.032 [main] INFO  org.flywaydb.core.internal.util.VersionPrinter - Flyway Community Edition 5.0.3 by Boxfuse
+2018-04-12 00:33:13.374 [main] INFO  o.flywaydb.core.internal.database.DatabaseFactory - Database: jdbc:mysql://localhost:3308/sod (MySQL 5.7)
+2018-04-12 00:33:13.381 [main] DEBUG org.flywaydb.core.Flyway - DDL Transactions Supported: false
+2018-04-12 00:33:13.383 [main] DEBUG org.flywaydb.core.Flyway - Schema: sod
+2018-04-12 00:33:13.390 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - Spring Jdbc available: true
+2018-04-12 00:33:13.391 [main] DEBUG o.f.core.internal.callback.SqlScriptFlywayCallback - Scanning for SQL callbacks ...
+2018-04-12 00:33:13.391 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: '', Suffixes: '.sql')
+2018-04-12 00:33:13.392 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@4f8e5cde ...
+2018-04-12 00:33:13.392 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 00:33:13.393 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 00:33:13.395 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/
+2018-04-12 00:33:13.396 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration (db/migration)
+2018-04-12 00:33:13.397 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_uploadings_table.sql
+2018-04-12 00:33:13.435 [main] DEBUG org.flywaydb.core.internal.command.DbValidate - Validating migrations ...
+2018-04-12 00:33:13.440 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'V', Suffixes: '.sql')
+2018-04-12 00:33:13.440 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 00:33:13.441 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 00:33:13.441 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_uploadings_table.sql
+2018-04-12 00:33:13.444 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'R', Suffixes: '.sql')
+2018-04-12 00:33:13.444 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 00:33:13.445 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 00:33:13.445 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_uploadings_table.sql (filename: V1__create_uploadings_table.sql)
+2018-04-12 00:33:13.446 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.jdbc.JdbcMigration')
+2018-04-12 00:33:13.446 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 00:33:13.446 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 00:33:13.446 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_uploadings_table.sql (filename: V1__create_uploadings_table.sql)
+2018-04-12 00:33:13.447 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.spring.SpringJdbcMigration')
+2018-04-12 00:33:13.447 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 00:33:13.447 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 00:33:13.447 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_uploadings_table.sql (filename: V1__create_uploadings_table.sql)
+2018-04-12 00:33:13.471 [main] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.034s)
+2018-04-12 00:33:13.480 [main] DEBUG org.flywaydb.core.internal.command.DbSchemas - Schema `sod` already exists. Skipping schema creation.
+2018-04-12 00:33:13.512 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `sod`: 1
+2018-04-12 00:33:13.513 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `sod` is up to date. No migration necessary.
+2018-04-12 00:33:13.635 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-12 00:33:13.667 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-12 00:33:13.723 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-12 00:33:13.745 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-12 00:33:13.846 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-12 00:33:13.848 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-12 00:33:13.899 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-12 00:33:14.021 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-04-12 00:33:14.494 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-12 00:33:15.112 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-12 00:33:15.437 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3aaf4f07: startup date [Thu Apr 12 00:33:11 CST 2018]; root of context hierarchy
+2018-04-12 00:33:15.517 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings/{id}/approval],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.approval(java.lang.Long)
+2018-04-12 00:33:15.518 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.showUploading(java.lang.Long)
+2018-04-12 00:33:15.519 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.thouthworks.felix.services.eureka.sod.domain.Uploading>> com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.listUploadings()
+2018-04-12 00:33:15.519 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.uploadText(java.lang.String)
+2018-04-12 00:33:15.521 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-12 00:33:15.522 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-12 00:33:15.553 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-12 00:33:15.553 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-12 00:33:15.568 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandlers
+2018-04-12 00:33:15.831 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - Started SodApplicationTests in 5.017 seconds (JVM running for 5.91)
+2018-04-12 00:33:15.994 [Thread-1] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3aaf4f07: startup date [Thu Apr 12 00:33:11 CST 2018]; root of context hierarchy
+2018-04-12 00:33:16.000 [Thread-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-12 00:33:16.001 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-12 00:33:16.004 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-12 01:09:00.951 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - Starting SodApplicationTests on CNybzhou.local with PID 74638 (started by ybzhou in /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod)
+2018-04-12 01:09:00.958 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - The following profiles are active: dev
+2018-04-12 01:09:01.314 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6d1310f6: startup date [Thu Apr 12 01:09:01 CST 2018]; root of context hierarchy
+2018-04-12 01:09:02.579 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$efef2885] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-12 01:09:02.794 [main] INFO  org.flywaydb.core.internal.util.VersionPrinter - Flyway Community Edition 5.0.3 by Boxfuse
+2018-04-12 01:09:03.107 [main] INFO  o.flywaydb.core.internal.database.DatabaseFactory - Database: jdbc:mysql://localhost:3308/sod (MySQL 5.7)
+2018-04-12 01:09:03.112 [main] DEBUG org.flywaydb.core.Flyway - DDL Transactions Supported: false
+2018-04-12 01:09:03.113 [main] DEBUG org.flywaydb.core.Flyway - Schema: sod
+2018-04-12 01:09:03.119 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - Spring Jdbc available: true
+2018-04-12 01:09:03.120 [main] DEBUG o.f.core.internal.callback.SqlScriptFlywayCallback - Scanning for SQL callbacks ...
+2018-04-12 01:09:03.121 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: '', Suffixes: '.sql')
+2018-04-12 01:09:03.121 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@4f8e5cde ...
+2018-04-12 01:09:03.121 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 01:09:03.121 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 01:09:03.123 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/
+2018-04-12 01:09:03.123 [main] DEBUG o.f.c.i.u.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration (db/migration)
+2018-04-12 01:09:03.123 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_uploadings_table.sql
+2018-04-12 01:09:03.147 [main] DEBUG org.flywaydb.core.internal.command.DbValidate - Validating migrations ...
+2018-04-12 01:09:03.151 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'V', Suffixes: '.sql')
+2018-04-12 01:09:03.152 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 01:09:03.152 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 01:09:03.152 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Found resource: db/migration/V1__create_uploadings_table.sql
+2018-04-12 01:09:03.155 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'R', Suffixes: '.sql')
+2018-04-12 01:09:03.156 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 01:09:03.156 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 01:09:03.156 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_uploadings_table.sql (filename: V1__create_uploadings_table.sql)
+2018-04-12 01:09:03.157 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.jdbc.JdbcMigration')
+2018-04-12 01:09:03.157 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 01:09:03.157 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 01:09:03.157 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_uploadings_table.sql (filename: V1__create_uploadings_table.sql)
+2018-04-12 01:09:03.158 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.spring.SpringJdbcMigration')
+2018-04-12 01:09:03.158 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Scanning URL: file:/Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/sod/target/classes/db/migration
+2018-04-12 01:09:03.158 [main] DEBUG org.flywaydb.core.internal.util.FeatureDetector - JBoss VFS v2 available: false
+2018-04-12 01:09:03.159 [main] DEBUG o.f.c.i.util.scanner.classpath.ClassPathScanner - Filtering out resource: db/migration/V1__create_uploadings_table.sql (filename: V1__create_uploadings_table.sql)
+2018-04-12 01:09:03.181 [main] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.032s)
+2018-04-12 01:09:03.190 [main] DEBUG org.flywaydb.core.internal.command.DbSchemas - Schema `sod` already exists. Skipping schema creation.
+2018-04-12 01:09:03.220 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `sod`: 1
+2018-04-12 01:09:03.221 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `sod` is up to date. No migration necessary.
+2018-04-12 01:09:03.350 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-12 01:09:03.381 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-12 01:09:03.430 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-12 01:09:03.451 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-12 01:09:03.569 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-12 01:09:03.571 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-12 01:09:03.621 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-12 01:09:03.764 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-04-12 01:09:04.329 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-12 01:09:04.973 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-12 01:09:05.303 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6d1310f6: startup date [Thu Apr 12 01:09:01 CST 2018]; root of context hierarchy
+2018-04-12 01:09:05.390 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings/{id}/approval],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.approval(java.lang.Long)
+2018-04-12 01:09:05.391 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.uploadText(java.lang.String)
+2018-04-12 01:09:05.392 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.thouthworks.felix.services.eureka.sod.domain.Uploading>> com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.listUploadings()
+2018-04-12 01:09:05.392 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/uploadings/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity com.thouthworks.felix.services.eureka.sod.rest.UploadingsApi.showUploading(java.lang.Long)
+2018-04-12 01:09:05.396 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-12 01:09:05.397 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-12 01:09:05.435 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-12 01:09:05.435 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-12 01:09:05.451 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandlers
+2018-04-12 01:09:05.733 [main] INFO  c.t.felix.services.eureka.sod.SodApplicationTests - Started SodApplicationTests in 5.476 seconds (JVM running for 6.534)
+2018-04-12 01:09:05.894 [Thread-1] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@6d1310f6: startup date [Thu Apr 12 01:09:01 CST 2018]; root of context hierarchy
+2018-04-12 01:09:05.900 [Thread-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-12 01:09:05.901 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-12 01:09:05.913 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -15,3 +15,6 @@ spring:
     user: user
     password: password
     url: jdbc:mysql://localhost:3308/sod?autoReconnect=true&useSSL=false
+
+approval:
+  url: "http://localhost:8081/images"

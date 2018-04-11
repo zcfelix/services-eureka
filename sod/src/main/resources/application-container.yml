@@ -13,3 +13,6 @@ spring:
     user: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
     url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?autoReconnect=true&useSSL=false
+
+approval:
+  url: "http://${APPROVAL_HOST}:${APPROVAL_PORT}/${APPROVAL_PATH}"

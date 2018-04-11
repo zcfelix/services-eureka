@@ -1,0 +1,26 @@
+version: '3.0'
+
+services:
+  sor-db:
+    image: mysql:latest
+    ports:
+      - 3307:3306
+    volumes:
+      - /Users/ybzhou/sql-data/sor-data-container:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=sor
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+  sor:
+    image: felix/sor
+    depends_on:
+      - sor-db
+    ports:
+      - 8081:8081
+    environment:
+      - DATABASE_HOST=sor-db
+      - DATABASE_PORT=3306
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=sor

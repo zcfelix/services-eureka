@@ -1,5 +1,6 @@
 package com.thouthworks.felix.services.eureka.sod.domain;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
@@ -8,7 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class ApprovalService {
-    public static final String URL = "http://localhost:8081/images";
+
+    @Value("${approval.url}")
+    private String URL;
+
     private RestTemplate restTemplate = new RestTemplate();
 
     public void approval(Uploading uploading) {
