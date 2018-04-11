@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sod/sod.iml" filepath="$PROJECT_DIR$/sod/sod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sor/sor.iml" filepath="$PROJECT_DIR$/sor/sor.iml" />
+    </modules>
+  </component>
+</project>
