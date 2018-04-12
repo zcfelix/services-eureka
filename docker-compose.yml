@@ -2,6 +2,7 @@ version: '3.0'
 
 services:
   sor-db:
+    container_name: sor-db-container
     image: mysql:latest
     ports:
       - 3307:3306
@@ -13,6 +14,7 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
   sor:
+    container_name: sor-container
     image: felix/sor
     depends_on:
       - sor-db
@@ -25,6 +27,7 @@ services:
       - DATABASE_PASSWORD=password
       - DATABASE_NAME=sor
   sod-db:
+    container_name: sod-db-container
     image: mysql:latest
     ports:
       - 3308:3306
@@ -36,6 +39,7 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
   sod:
+    container_name: sod-container
     image: felix/sod
     depends_on:
       - sod-db
@@ -51,5 +55,14 @@ services:
       - APPROVAL_HOST=sor
       - APPROVAL_PORT=8081
       - APPROVAL_PATH=images
-
+  nginx-proxy:
+    container_name: nginx-proxy
+    image: felix/nginx:latest
+    volumes:
+      - /Users/ybzhou/ThoughtWorks/Training/gaint-training/services-eureka/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    links:
+      - sor
+      - sod
 
